@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Event</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <nav>
+        West-Event
+    </nav>
+    <h1 style="text-align: center;">Unregister this user?</h1>
+
+    <form action="/delete/<%= user._id %>" method="POST">
+        <div class="row">
+            <label for="password">Insert user password to confirm</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="register-button">Unregister</button>
+    </form>
+</body>
+</html>

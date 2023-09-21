@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        West-Event
+    </nav>
+    <div id="users">
+        <h1>Registered Users</h1>
+        <a href="/register">Register New User</a>
+        <hr>
+        <% users.forEach(user => {%>
+        <div class="user">
+            <h3><%= user.firstName%> <%= user.lastName %></h3>
+            <p>
+                <ul>
+                    <li><%= user.email %></li>
+                    <li><%= user.phone %></li>
+                    <li><%= user.organization %></li>
+                    <li><%= user.age %></li>
+                </ul>
+            </p>
+            <a href="/edit/<%= user._id %>">Edit</a>
+            <a href="/delete/<%= user._id %>">Unregister</a>
+        </div>
+        <% }); %>
+    </div>
+</body>
+</html>
